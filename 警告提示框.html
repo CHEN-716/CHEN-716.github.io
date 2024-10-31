@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>警告提示框</title>
+</head>
+
+<script>
+function myAlert() {
+  alert("我是一个警告框！");
+}
+
+function myConfirm() {
+    var txt;
+      if (confirm("Press a button!")) {
+        txt = "您按了确定";
+      } else {
+        txt = "您按了取消";
+      }
+    document.getElementById("demo").innerHTML = txt;
+}
+
+function myPrompt() {
+  var txt;
+  var person = prompt("请输入您的名字：", "哈利波特");
+  if (person == null || person == "") {
+    txt = "用户取消输入";
+  } else {
+    txt = "你好，" + person + "！今天过得好吗？";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<body>
+<h1>JavaScript 警告框</h1>
+
+<button id="btnAlert" onclick="myAlert()">试一试Alert</button>
+<p></p>
+<button id="btnConfirm" onclick="myConfirm()">试一试confirm</button>
+<p></p>
+<button id="btnPrompt" onclick="myPrompt()">试一试prompt</button>
+<p id="demo"></p>
+<iframe id="myframe" style="width: 100px;height: 200px;" frameborder="no" src="下拉框.html"></iframe>
+</body>
+</html>
